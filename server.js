@@ -2,6 +2,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.static(__dirname + "/public"));
+
 app.get("/", (req, res) => {
   res.json({
     name: "Joseph Mendoza",
@@ -19,4 +21,5 @@ app.get("/bad", (req, res) => {
     errorMessage: "This is a bad url"
   });
 });
+
 app.listen(3000, () => console.log("Listening on port 3000"));
