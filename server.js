@@ -35,6 +35,12 @@ app.get("/about", (req, res) => {
   });
 });
 
+app.get("/projects", (req, res) => {
+  res.render("projects.hbs", {
+    pageTitle: "Projects"
+  });
+});
+
 app.get("/bad", (req, res) => {
   res.status(400).json({
     errorMessage: "This is a bad url"
